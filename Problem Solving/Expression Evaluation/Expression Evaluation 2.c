@@ -1,4 +1,4 @@
-//a given number is a prime number or not
+
 #include <stdio.h>
 
 int main() {
@@ -8,8 +8,8 @@ int main() {
     scanf("%d", &number);
     for (int i = 2; i<= number/2; i++) {
         if (number % i == 0) {
-            count++;   // Found a divisor, not prime
-            break; 
+            count++;
+            break;
         }
     }
     if (count == 0) {

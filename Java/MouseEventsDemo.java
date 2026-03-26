@@ -1,6 +1,4 @@
-/**
- * Aim: 10. Handle mouse events using Adapter classes.
- */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -12,7 +10,7 @@ public class MouseEventsDemo extends JFrame {
         setTitle("Mouse Events Adapter Demo");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         addMouseListener(new MyMouseAdapter());
         addMouseMotionListener(new MyMouseAdapter());
         setVisible(true);

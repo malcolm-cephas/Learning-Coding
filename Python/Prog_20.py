@@ -2,7 +2,7 @@
 
 import numpy as np
 
-# Defining a matrix
+
 matrix = np.array([
     [1, 2, 3],
     [4, 5, 6],
@@ -12,5 +12,5 @@ matrix = np.array([
 print("The defined matrix is:")
 print(matrix)
 
-# Accessing elements demo
+
 print(f"\nElement at row 1, col 2: {matrix[0][1]}")

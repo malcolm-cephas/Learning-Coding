@@ -7,7 +7,7 @@ def submit():
 
 def reset():
     entry1.delete(0, END)
-    entry2.get(0, END) # Clear entries
+    entry2.get(0, END)
     print("Reset!")
 
 root = Tk()

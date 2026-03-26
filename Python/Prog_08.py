@@ -4,7 +4,7 @@ import numpy as np
 my_list = [1, 2, 3, 4, 5]
 my_tuple = (10, 20, 30, 40, 50)
 
-# Converting to arrays
+
 arr1 = np.array(my_list)
 arr2 = np.array(my_tuple)
 

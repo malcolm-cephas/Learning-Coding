@@ -1,5 +1,5 @@
 <?php
-/* Aim: 15. PHP String Operations. */
+
 $str = "Welcome to Web Programming Lab";
 echo "String: $str<br>";
 echo "a) Length: " . strlen($str) . "<br>";

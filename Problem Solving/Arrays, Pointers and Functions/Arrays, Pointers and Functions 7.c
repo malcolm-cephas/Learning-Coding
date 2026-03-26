@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to allocate a matrix dynamically
+
 int** allocateMatrix(int rows, int cols) {
     int **matrix = (int **)malloc(rows * sizeof(int *));
     for (int i = 0; i < rows; i++) {
@@ -10,7 +10,7 @@ int** allocateMatrix(int rows, int cols) {
     return matrix;
 }
 
-// Function to input matrix elements
+
 void inputMatrix(int **matrix, int rows, int cols) {
     printf("Enter elements (%d x %d):\n", rows, cols);
     for (int i = 0; i < rows; i++) {
@@ -20,7 +20,7 @@ void inputMatrix(int **matrix, int rows, int cols) {
     }
 }
 
-// Function to display matrix
+
 void displayMatrix(int **matrix, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
@@ -30,7 +30,7 @@ void displayMatrix(int **matrix, int rows, int cols) {
     }
 }
 
-// Function to compute transpose
+
 int** transposeMatrix(int **matrix, int rows, int cols) {
     int **transpose = allocateMatrix(cols, rows);
 
@@ -42,7 +42,7 @@ int** transposeMatrix(int **matrix, int rows, int cols) {
     return transpose;
 }
 
-// Function to free allocated memory
+
 void freeMatrix(int **matrix, int rows) {
     for (int i = 0; i < rows; i++) {
         free(matrix[i]);
@@ -71,7 +71,7 @@ int main() {
     printf("\nTranspose Matrix:\n");
     displayMatrix(transpose, cols, rows);
 
-    // Free memory
+
     freeMatrix(matrix, rows);
     freeMatrix(transpose, cols);
 

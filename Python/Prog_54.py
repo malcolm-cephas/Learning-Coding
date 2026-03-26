@@ -5,10 +5,10 @@ filename = input("Enter file name: ")
 try:
     with open(filename, "r") as f:
         content = f.read()
-        # Splitting and stripping punctuation
+
         words = content.lower().split()
         unique_words = sorted(set(words))
-        
+
         print("\nUnique words in alphabetical order:")
         for word in unique_words:
             print(word)

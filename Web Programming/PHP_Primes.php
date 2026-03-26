@@ -1,5 +1,5 @@
 <?php
-/* Aim: 14. PHP script to print prime numbers between 1-50. */
+
 echo "<h3>Prime numbers between 1 and 50</h3>";
 for ($i = 2; $i <= 50; $i++) {
     $count = 0;

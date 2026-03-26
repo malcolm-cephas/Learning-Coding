@@ -1,6 +1,6 @@
 '''Aim: Demonstrate module creation using geometrical shapes.'''
 
-# Geometry module content (internal simulation or multiple files)
+
 import math
 
 class Shape:

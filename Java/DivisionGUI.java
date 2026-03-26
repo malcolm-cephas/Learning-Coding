@@ -1,6 +1,4 @@
-/**
- * Aim: 4. Integer division GUI with exception handling.
- */
+
 import javax.swing.*;
 import java.awt.*;
 

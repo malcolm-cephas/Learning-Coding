@@ -1,6 +1,4 @@
-/**
- * Aim: 1. CPU Scheduling algorithms (FCFS, SJF, RoundRobin, Priority).
- */
+
 #include <stdio.h>
 
 void FCFS() {
@@ -16,7 +14,7 @@ void FCFS() {
 
 void SJF() {
     int bt[] = {10, 5, 8}, p[] = {0, 1, 2};
-    // Sort by burst time
+
     for(int i=0; i<3; i++) {
         for(int j=i+1; j<3; j++) {
             if(bt[i] > bt[j]) {

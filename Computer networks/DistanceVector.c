@@ -1,6 +1,4 @@
-/**
- * Aim: 6. Distance Vector Routing algorithm.
- */
+
 #include <stdio.h>
 
 struct node {

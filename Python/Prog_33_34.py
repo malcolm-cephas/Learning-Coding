@@ -13,10 +13,10 @@ def check_package(package):
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
         return False
 
-# Attempt to check/install
+
 check_package("numpy")
 check_package("scipy")
-# Note: 'Plotpy' commonly refers to 'plotly' or 'matplotlib'
+
 check_package("matplotlib")
 
 import numpy as np

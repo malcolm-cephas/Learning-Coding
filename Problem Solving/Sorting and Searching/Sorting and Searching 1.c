@@ -1,4 +1,4 @@
-//A non-recursive function to search for a Key value in a given list of integers using linear search method.
+
 #include <stdio.h>
 
 int main() {
@@ -25,14 +25,14 @@ int main() {
     return 0;
 }
 
-// Function to perform linear search (non-recursive)
-int linearSearch(int arr[], int n, int key) 
+
+int linearSearch(int arr[], int n, int key)
 {
     int i;
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++)
     {
         if (arr[i] == key)
-            return i;   // return index if key is found
+            return i;
     }
-    return -1; // key not found
+    return -1;
 }

@@ -2,7 +2,7 @@
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-# Feature (size in sqft) and Target (price in $1000s)
+
 X = np.array([[500], [700], [1000], [1200], [1500]])
 y = np.array([100, 150, 200, 250, 300])
 

@@ -5,12 +5,12 @@ from scipy import stats
 
 data = [10, 20, 20, 30, 40, 50, 60]
 
-# Central Tendency
+
 mean = np.mean(data)
 median = np.median(data)
 mode = statistics.mode(data)
 
-# Dispersion
+
 variance = np.var(data)
 std_dev = np.std(data)
 

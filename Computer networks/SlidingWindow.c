@@ -1,6 +1,4 @@
-/**
- * Aim: 3. Sliding Window and Go-Back-N mechanism.
- */
+
 #include <stdio.h>
 
 int main() {

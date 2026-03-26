@@ -1,4 +1,4 @@
-/* Exp 2: Client-side Validation and Exp 1 functionality */
+
 
 document.getElementById('regForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -7,7 +7,7 @@ document.getElementById('regForm').addEventListener('submit', function(e) {
     const pass = document.getElementById('regPass').value;
     const msg = document.getElementById('regMsg');
 
-    // Simple validation (Exp 2)
+
     if (name.length < 3) {
         msg.textContent = "Name must be at least 3 characters.";
         return;
@@ -26,7 +26,7 @@ document.getElementById('regForm').addEventListener('submit', function(e) {
     this.reset();
 });
 
-// Shopping Cart (Exp 1 Logic)
+
 let cart = [];
 let total = 0;
 
@@ -34,7 +34,7 @@ document.querySelectorAll('.add-btn').forEach((btn, index) => {
     btn.addEventListener('click', () => {
         const itemNames = ["Item 1", "Item 2", "Item 3", "Item 4"];
         const itemPrices = [10, 20, 15, 25];
-        
+
         cart.push(itemNames[index]);
         total += itemPrices[index];
         updateCart();
@@ -44,7 +44,7 @@ document.querySelectorAll('.add-btn').forEach((btn, index) => {
 function updateCart() {
     const cartList = document.getElementById('cartItems');
     const totalPriceSpan = document.getElementById('totalPrice');
-    
+
     cartList.innerHTML = "";
     if (cart.length === 0) {
         cartList.innerHTML = "<li>Your cart is empty.</li>";

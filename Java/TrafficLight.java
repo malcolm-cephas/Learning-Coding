@@ -1,6 +1,4 @@
-/**
- * Aim: 7. Traffic light simulation with radio buttons.
- */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

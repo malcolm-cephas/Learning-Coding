@@ -1,6 +1,4 @@
-/**
- * Aim: 1. Character stuffing and bit stuffing methods.
- */
+
 #include <stdio.h>
 #include <string.h>
 

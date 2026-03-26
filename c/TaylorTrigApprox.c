@@ -11,7 +11,7 @@ double taylorSin(double x, int n) {
 }
 
 int main() {
-    double x = 0.523599; // 30 degrees in rad
+    double x = 0.523599;
     printf("Taylor Sin(30 deg): %f\n", taylorSin(x, 10));
     printf("Library Sin(30 deg): %f\n", sin(x));
     return 0;

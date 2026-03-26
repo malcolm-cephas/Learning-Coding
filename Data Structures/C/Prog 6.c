@@ -5,50 +5,50 @@
 
 int queue[MAX_SIZE],front=-1, rear=-1;
 
-// Function to add an element to the queue
-void enqueue(int element) 
+
+void enqueue(int element)
 {
-    if (rear == MAX_SIZE - 1) 
+    if (rear == MAX_SIZE - 1)
 	{
         printf("Queue Overflow\n");
-    } 
-	else 
+    }
+	else
 	{
-		if(front == -1) 
+		if(front == -1)
 			front = 0;
 		queue[++rear] = element;
     }
 }
 
-// Function to remove an element from the queue
-int dequeue() 
+
+int dequeue()
 {
 	int item;
-    if (front == -1) 
+    if (front == -1)
 	{
 		printf("Queue Underflow\n");
-        return -1; // Indicating underflow
-    } 
-	else 
+        return -1;
+    }
+	else
 	{
         int item = queue[front++];
-        if (front > rear)   // Queue is now empty
-		{ 
+        if (front > rear)
+		{
             front = -1;
             rear = -1;
-        } 
+        }
         return item;
     }
 }
 
-// Function to display all the items from Queue
+
 void display()
 {
     int i;
-    if (front == -1) 
+    if (front == -1)
 	{
 		printf("Queue is Empty\n");
-    } 
+    }
     else
     {
         for(i=front;i<=rear;i++)
@@ -56,7 +56,7 @@ void display()
     }
 }
 
-// Main function
+
 int main() {
     int ch,data;
     do{

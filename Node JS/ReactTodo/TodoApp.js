@@ -1,4 +1,4 @@
-/* Exp 9: React TODO Application */
+
 
 import React, { useState } from 'react';
 
@@ -24,10 +24,10 @@ const TodoApp = () => {
     return (
         <div className="todo-container">
             <h1>React TODO App</h1>
-            <input 
-                type="text" 
-                value={input} 
-                onChange={(e) => setInput(e.target.value)} 
+            <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
                 placeholder="New task..."
             />
             <button onClick={addTask}>Add</button>

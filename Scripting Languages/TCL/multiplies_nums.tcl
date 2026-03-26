@@ -8,6 +8,6 @@ proc multiplyNums {} {
     return $product
 }
 
-# Call the procedure
+
 set result [multiplyNums]
 puts "The product of numbers from 1 to 10 is: $result"

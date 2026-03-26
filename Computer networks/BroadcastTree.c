@@ -1,6 +1,4 @@
-/**
- * Aim: 5. Obtain a broadcast tree for a subnet.
- */
+
 #include <stdio.h>
 
 int main() {

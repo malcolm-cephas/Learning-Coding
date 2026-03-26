@@ -1,6 +1,4 @@
-/**
- * Aim: 6. Thread synchronization acting on shared object (Bus Reservation).
- */
+
 class ReservationSystem {
     int availableSeats = 1;
     synchronized void bookTicket(String name) {

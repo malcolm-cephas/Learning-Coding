@@ -1,7 +1,7 @@
 '''Aim: Write a function called palindrome that takes a string argument and returns True if it is a palindrome and False otherwise.'''
 
 def palindrome(s):
-    # Ignoring case and spaces for better palindrome check
+
     s = s.lower().replace(" ", "")
     return s == s[::-1]
 

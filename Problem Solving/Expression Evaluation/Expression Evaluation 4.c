@@ -1,4 +1,4 @@
-//to generate the first n terms of the Fibonacci sequence
+
 #include <stdio.h>
 
 int main() {

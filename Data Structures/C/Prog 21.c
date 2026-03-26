@@ -1,6 +1,4 @@
-/**
- * Aim: 9. Merge sort sorting method to sort a given list of integers in ascending order.
- */
+
 #include <stdio.h>
 
 void merge(int arr[], int l, int m, int r) {

@@ -8,7 +8,7 @@ def water_jug(a, b, target):
         if (ca, cb) in visited: continue
         visited.add((ca, cb))
         if ca == target or cb == target: return True
-        # Possible actions
+
         queue.extend([(a, cb), (ca, b), (0, cb), (ca, 0), (max(0, ca-(b-cb)), min(b, cb+ca)), (min(a, ca+cb), max(0, cb-(a-ca)))])
     return False
 

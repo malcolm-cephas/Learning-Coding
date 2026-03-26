@@ -1,5 +1,5 @@
 <?php
-/* Aim: 30 & 13. Age-based authorization. */
+
 $name = $_POST['uname'];
 $age = $_POST['uage'];
 

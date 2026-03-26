@@ -2,7 +2,7 @@
 import nltk
 
 def tag_pos(words):
-    # Mocking NLTK tagger output for demonstration
+
     tags = {
         'book': 'Noun', 'read': 'Verb', 'blue': 'Adj', 'quickly': 'Adv',
         'is': 'Verb', 'in': 'Preposition', 'and': 'Conjunction', 'he': 'Pronoun',

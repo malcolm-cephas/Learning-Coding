@@ -1,6 +1,6 @@
 '''Aim: Define a module to find Fibonacci Numbers and import it into another script.'''
 
-# This file acts as both the module and the demo
+
 def get_fib(n):
     fib_list = []
     a, b = 0, 1

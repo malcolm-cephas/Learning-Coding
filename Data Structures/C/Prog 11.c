@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define structure for tree node
+
 struct Node {
     int data;
     struct Node *left, *right;
 };
 
-// Function to create a new node
+
 struct Node* createNode(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -15,7 +15,7 @@ struct Node* createNode(int value) {
     return newNode;
 }
 
-// Insert node into BST
+
 struct Node* insert(struct Node* root, int value) {
     if (root == NULL)
         return createNode(value);
@@ -28,7 +28,7 @@ struct Node* insert(struct Node* root, int value) {
     return root;
 }
 
-// Inorder traversal (gives sorted order)
+
 void inorder(struct Node* root) {
     if (root != NULL) {
         inorder(root->left);

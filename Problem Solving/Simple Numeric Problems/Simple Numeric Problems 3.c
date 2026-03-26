@@ -1,4 +1,4 @@
-// multiplication table for a given number and the number of rows inthe table 
+
 
 #include <stdio.h>
 int main()

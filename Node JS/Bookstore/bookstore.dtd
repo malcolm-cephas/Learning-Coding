@@ -1,4 +1,4 @@
-<!-- DTD validation for Bookstore -->
+
 <!ELEMENT bookstore (book+)>
 <!ELEMENT book (title, author, year, price)>
 <!ATTLIST book category CDATA #REQUIRED>

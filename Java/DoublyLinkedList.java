@@ -1,6 +1,4 @@
-/**
- * Aim: 6. Doubly linked list with deletion.
- */
+
 class Node {
     int data;
     Node prev, next;

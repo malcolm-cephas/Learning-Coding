@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Definition of a node in a binary tree
-struct Node 
+
+struct Node
 {
     int data;
     struct Node *left;
@@ -11,21 +11,21 @@ struct Node
 int top=-1;
 struct Node *s[40];
 
-//push into stack
+
 int push(struct Node *x)
 {
     s[++top]=x;
 }
 
-//pop from stack
+
 struct Node* pop()
 {
     struct Node *x=s[top--];
     return(x);
 }
 
-// Function to create a new node
-struct Node* createNode(int data) 
+
+struct Node* createNode(int data)
 {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -122,30 +122,25 @@ void postOrder(struct Node *root)
 }
 
 int main() {
-    // Constructing a binary tree
-    //       1
-    //      / \
-    //     2   3
-    //    / \
-    //   4   5
+
+
+
+
+
+
     root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
     root->left->left = createNode(4);
     root->left->right = createNode(5);
 
-    /* Traversals
-    printf("Pre-order traversal: ");
-    preOrder(root);
-    printf("\n"); */
+
 
     printf("In-order traversal: ");
     inOrder(root);
     printf("\n");
 
-   /* printf("Post-order traversal: ");
-    postOrder(root);
-    printf("\n"); */
+
 
     return 0;
 }

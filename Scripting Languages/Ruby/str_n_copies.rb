@@ -1,5 +1,5 @@
 def string_copies(str, n)
-  return str * n    # returns n copies of str      
+  return str * n
 end
 
 print "Enter a string: "

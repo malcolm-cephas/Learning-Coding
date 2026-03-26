@@ -9,14 +9,14 @@ def alphabeta(node, depth, alpha, beta, maximizingPlayer):
         for child in node.children():
             v = max(v, alphabeta(child, depth-1, alpha, beta, False))
             alpha = max(alpha, v)
-            if beta <= alpha: break # Beta prune
+            if beta <= alpha: break
         return v
     else:
         v = float('inf')
         for child in node.children():
             v = min(v, alphabeta(child, depth-1, alpha, beta, True))
             beta = min(beta, v)
-            if beta <= alpha: break # Alpha prune
+            if beta <= alpha: break
         return v
 
 print("Alpha-Beta Pruning (Search optimization logic initialized).")

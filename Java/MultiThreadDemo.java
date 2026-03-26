@@ -1,6 +1,4 @@
-/**
- * Aim: 5. Multi-threaded random integer generator and processor.
- */
+
 import java.util.Random;
 
 class RandomGenerator extends Thread {

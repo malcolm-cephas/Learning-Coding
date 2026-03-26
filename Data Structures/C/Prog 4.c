@@ -6,12 +6,12 @@
 
 int stack[MAX_SIZE],top=-1;
 
-// Function to check if the stack is empty
+
 bool isEmpty() {
     return top == -1;
 }
 
-// Function to add an item to the stack
+
 void push(int item) {
     if (top == MAX_SIZE - 1) {
         printf("Stack Overflow\n");
@@ -20,31 +20,31 @@ void push(int item) {
     }
 }
 
-// Function to remove an item from the stack
+
 int pop() {
     if (isEmpty()) {
         printf("Stack Underflow\n");
-        return -1; // Indicating underflow
+        return -1;
     } else {
         return stack[top--];
     }
 }
 
-// Function to get the top item of the stack
+
 int peek() {
     if (isEmpty()) {
         printf("Stack is Empty\n");
-        return -1; // Indicating empty stack
+        return -1;
     } else {
         return stack[top];
     }
 }
 
-// Function to show all the items from stack
+
 void show()
 {
     int i;
-    if (isEmpty()) 
+    if (isEmpty())
         printf("Stack is Empty\n");
     else{
     for(i=top;i>-1;i--)
@@ -52,7 +52,7 @@ void show()
     }
 }
 
-// Main function
+
 int main() {
     int ch,data;
     do{

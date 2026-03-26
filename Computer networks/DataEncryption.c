@@ -1,6 +1,4 @@
-/**
- * Aim: 7. Data encryption and decryption.
- */
+
 #include <stdio.h>
 #include <string.h>
 

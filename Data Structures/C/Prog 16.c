@@ -1,23 +1,23 @@
-// Red Black Tree operations in C
+
 
 #include <stdio.h>
 #include <stdlib.h>
 
-// Red-Black Tree Node Structure
+
 typedef struct Node {
     int data;
     struct Node* parent;
     struct Node* left;
     struct Node* right;
-    int color; // 0 for black, 1 for red
+    int color;
 } Node;
 
-// Red-Black Tree Structure
+
 typedef struct RedBlackTree {
     Node* root;
 } RedBlackTree;
 
-// Create a new Red-Black Tree Node
+
 Node* createNode(int data) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (newNode == NULL) {
@@ -26,11 +26,11 @@ Node* createNode(int data) {
     }
     newNode->data = data;
     newNode->parent = newNode->left = newNode->right = NULL;
-    newNode->color = 1; // New nodes are initially red
+    newNode->color = 1;
     return newNode;
 }
 
-// Create a new Red-Black Tree
+
 RedBlackTree* createRedBlackTree() {
     RedBlackTree* newTree = (RedBlackTree*)malloc(sizeof(RedBlackTree));
     if (newTree == NULL) {
@@ -41,7 +41,7 @@ RedBlackTree* createRedBlackTree() {
     return newTree;
 }
 
-// Function to perform left rotation
+
 void leftRotate(RedBlackTree* tree, Node* x) {
     Node* y = x->right;
     x->right = y->left;
@@ -58,7 +58,7 @@ void leftRotate(RedBlackTree* tree, Node* x) {
     x->parent = y;
 }
 
-// Function to perform right rotation
+
 void rightRotate(RedBlackTree* tree, Node* y) {
     Node* x = y->left;
     y->left = x->right;
@@ -75,47 +75,47 @@ void rightRotate(RedBlackTree* tree, Node* y) {
     y->parent = x;
 }
 
-// Function to fix the Red-Black Tree properties after insertion
+
 void insertFixup(RedBlackTree* tree, Node* z) {
     while (z->parent != NULL && z->parent->color == 1) {
         if (z->parent == z->parent->parent->left) {
             Node* y = z->parent->parent->right;
             if (y != NULL && y->color == 1) {
-                z->parent->color = 0; // Black
-                y->color = 0; // Black
-                z->parent->parent->color = 1; // Red
+                z->parent->color = 0;
+                y->color = 0;
+                z->parent->parent->color = 1;
                 z = z->parent->parent;
             } else {
                 if (z == z->parent->right) {
                     z = z->parent;
                     leftRotate(tree, z);
                 }
-                z->parent->color = 0; // Black
-                z->parent->parent->color = 1; // Red
+                z->parent->color = 0;
+                z->parent->parent->color = 1;
                 rightRotate(tree, z->parent->parent);
             }
         } else {
             Node* y = z->parent->parent->left;
             if (y != NULL && y->color == 1) {
-                z->parent->color = 0; // Black
-                y->color = 0; // Black
-                z->parent->parent->color = 1; // Red
+                z->parent->color = 0;
+                y->color = 0;
+                z->parent->parent->color = 1;
                 z = z->parent->parent;
             } else {
                 if (z == z->parent->left) {
                     z = z->parent;
                     rightRotate(tree, z);
                 }
-                z->parent->color = 0; // Black
-                z->parent->parent->color = 1; // Red
+                z->parent->color = 0;
+                z->parent->parent->color = 1;
                 leftRotate(tree, z->parent->parent);
             }
         }
     }
-    tree->root->color = 0; // Root must be black
+    tree->root->color = 0;
 }
 
-// Function to insert a node into the Red-Black Tree
+
 void insert(RedBlackTree* tree, int data) {
     Node* z = createNode(data);
     Node* y = NULL;
@@ -140,7 +140,7 @@ void insert(RedBlackTree* tree, int data) {
     insertFixup(tree, z);
 }
 
-// Function to find the minimum value node in the tree rooted at a given node
+
 Node* findMinValueNode(Node* node) {
     Node* current = node;
     while (current->left != NULL)
@@ -148,35 +148,35 @@ Node* findMinValueNode(Node* node) {
     return current;
 }
 
-// Function to fix the Red-Black Tree properties after deletion
+
 void deleteFixup(RedBlackTree* tree, Node* x) {
     while (x != tree->root && x->color == 0) {
         if (x == x->parent->left) {
             Node* w = x->parent->right;
             if (w->color == 1) {
-                w->color = 0; // Change sibling to black
-                x->parent->color = 1; // Change parent to red
+                w->color = 0;
+                x->parent->color = 1;
                 leftRotate(tree, x->parent);
                 w = x->parent->right;
             }
             if (w->left->color == 0 && w->right->color == 0) {
-                w->color = 1; // Change sibling to red
-                x = x->parent; // Move up the tree
+                w->color = 1;
+                x = x->parent;
             } else {
                 if (w->right->color == 0) {
-                    w->left->color = 0; // Change sibling's left child to black
-                    w->color = 1; // Change sibling to red
+                    w->left->color = 0;
+                    w->color = 1;
                     rightRotate(tree, w);
                     w = x->parent->right;
                 }
                 w->color = x->parent->color;
-                x->parent->color = 0; // Change parent to black
-                w->right->color = 0; // Change sibling's right child to black
+                x->parent->color = 0;
+                w->right->color = 0;
                 leftRotate(tree, x->parent);
-                x = tree->root; // This is to exit the loop
+                x = tree->root;
             }
         } else {
-            // Same as then clause with "right" and "left" exchanged
+
             Node* w = x->parent->left;
             if (w->color == 1) {
                 w->color = 0;
@@ -202,10 +202,10 @@ void deleteFixup(RedBlackTree* tree, Node* x) {
             }
         }
     }
-    x->color = 0; // Ensure the root is black
+    x->color = 0;
 }
 
-// Transplant helper function
+
 void transplant(RedBlackTree* tree, Node* u, Node* v) {
     if (u->parent == NULL) {
         tree->root = v;
@@ -219,7 +219,7 @@ void transplant(RedBlackTree* tree, Node* u, Node* v) {
     }
 }
 
-// Function to delete a node from the Red-Black Tree
+
 void delete(RedBlackTree* tree, int data) {
     Node* z = tree->root;
     while (z != NULL && z->data != data) {
@@ -231,11 +231,11 @@ void delete(RedBlackTree* tree, int data) {
 
     if (z == NULL) {
         printf("Node not found in the tree\n");
-        return; // Node to be deleted not found
+        return;
     }
 
-    Node* y = z; // Node to be unlinked from the tree
-    Node* x;     // y's only child or NULL
+    Node* y = z;
+    Node* x;
     int yOriginalColor = y->color;
 
     if (z->left == NULL) {
@@ -245,12 +245,12 @@ void delete(RedBlackTree* tree, int data) {
         x = z->left;
         transplant(tree, z, z->left);
     } else {
-        y = findMinValueNode(z->right); // Find the minimum node of the right subtree
+        y = findMinValueNode(z->right);
         yOriginalColor = y->color;
         x = y->right;
 
         if (y->parent == z) {
-            x->parent = y; // Necessary when x is NULL
+            x->parent = y;
         } else {
             transplant(tree, y, y->right);
             y->right = z->right;
@@ -270,7 +270,7 @@ void delete(RedBlackTree* tree, int data) {
     }
 }
 
-// Function to perform in-order traversal of the Red-Black Tree
+
 void inOrderTraversal(Node* root) {
     char c[2][6]={"BLACK","RED"};
     if (root != NULL) {
@@ -280,7 +280,7 @@ void inOrderTraversal(Node* root) {
     }
 }
 
-// Function to free memory by deallocating nodes
+
 void freeMemory(Node* root) {
     if (root == NULL)
         return;
@@ -311,7 +311,7 @@ int main() {
                 break;
         case 4: freeMemory(tree->root);
                 break;
-        default: printf("\nWrong selection!!! Try again!!!");  
+        default: printf("\nWrong selection!!! Try again!!!");
         }
     }while(choice!=4);
     return(0);

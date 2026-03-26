@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     try {
-        throw 10.5; // Throwing double
+        throw 10.5;
     } catch (...) {
         cout << "Caught All Exceptions!" << endl;
     }

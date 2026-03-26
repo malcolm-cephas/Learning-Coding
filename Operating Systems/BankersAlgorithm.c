@@ -1,6 +1,4 @@
-/**
- * Aim: 3. Bankers Algorithm for Deadlock Avoidance.
- */
+
 #include <stdio.h>
 
 int main() {

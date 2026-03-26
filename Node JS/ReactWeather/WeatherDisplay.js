@@ -1,4 +1,4 @@
-/* Exp 8: React Weather Component with Chart.js */
+
 
 import React, { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
@@ -10,7 +10,7 @@ const WeatherDisplay = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        // Simulating fetch from openweathermap.org (Exp 8)
+
         const weatherData = {
             current: 22,
             historical: [18, 20, 22, 19, 21, 23, 22]

@@ -1,6 +1,4 @@
-/**
- * Aim: 16. B-Tree (its operations) - Simple implementation
- */
+
 #include <stdio.h>
 #include <stdlib.h>
 

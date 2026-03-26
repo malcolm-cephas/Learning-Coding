@@ -1,5 +1,5 @@
 <?php
-/* Aim: 26 & 8. User validation against XML file data. */
+
 $xml = simplexml_load_file("UserXML_Search/users.xml");
 $user = $_POST['uname'];
 $pass = $_POST['upass'];

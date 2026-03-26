@@ -1,6 +1,4 @@
-/**
- * Aim: 8. Congestion control using Leaky bucket algorithm.
- */
+
 #include <stdio.h>
 
 int main() {

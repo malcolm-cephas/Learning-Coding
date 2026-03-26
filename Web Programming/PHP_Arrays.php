@@ -1,5 +1,5 @@
 <?php
-/* Aim: 16. PHP Merge and sort arrays descending. */
+
 $a1 = array(10, 50, 20);
 $a2 = array(30, 60, 40);
 

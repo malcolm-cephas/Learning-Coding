@@ -1,6 +1,4 @@
-/**
- * Aim: 8. Quick sort sorting method to sort a given list of integers in ascending order.
- */
+
 #include <stdio.h>
 
 void swap(int* a, int* b) {

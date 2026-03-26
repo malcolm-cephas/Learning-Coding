@@ -1,4 +1,4 @@
-//converts one given data type to another using auto conversion and casting
+
 #include <stdio.h>
 
 int main() {
@@ -10,15 +10,15 @@ int main() {
     printf("Enter an integer: ");
     scanf("%d", &intNum);
 
-    // Auto conversion (implicit)
-    // Convert float to int (auto conversion may happen implicitly)
-    int convertedInt = floatNum;  // Implicit conversion, decimal part will be truncated
-    
+
+
+    int convertedInt = floatNum;
+
     printf("Auto-converted float %.2f to int: %d\n", floatNum, convertedInt);
 
-    // Manual casting (explicit)
-    // Cast int to float
-    float castedFloat = (float)intNum;  // Explicit casting
+
+
+    float castedFloat = (float)intNum;
 
     printf("Manually casted int %d to float: %.2f\n", intNum, castedFloat);
 

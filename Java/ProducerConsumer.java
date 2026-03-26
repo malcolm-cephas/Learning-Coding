@@ -1,6 +1,4 @@
-/**
- * Aim: 12. Producer-Consumer problem with inter-thread communication.
- */
+
 class Q {
     int n;
     boolean valueSet = false;

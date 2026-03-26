@@ -1,6 +1,4 @@
-/**
- * Aim: 8. Abstract Shape class and its subclasses.
- */
+
 abstract class Shape {
     int dim1, dim2;
     Shape(int d1, int d2) { this.dim1 = d1; this.dim2 = d2; }

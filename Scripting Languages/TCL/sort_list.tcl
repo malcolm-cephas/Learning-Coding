@@ -9,7 +9,7 @@ proc compare {mylist} {
             set b [lindex $mylist [expr {$j + 1}]]
 
             if {$a > $b} {
-                # swap elements
+
                 set temp $a
                 lset mylist $j $b
                 lset mylist [expr {$j + 1}] $temp

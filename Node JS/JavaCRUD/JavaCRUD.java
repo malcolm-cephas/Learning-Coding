@@ -1,11 +1,9 @@
-/**
- * Aim: 4. Java CRUD application with Oracle/MySQL database.
- */
+
 import java.sql.*;
 import java.util.Scanner;
 
 public class JavaCRUD {
-    // Database credentials (placeholder)
+
     static final String DB_URL = "jdbc:mysql://localhost:3306/lab_db";
     static final String USER = "root";
     static final String PASS = "password";
@@ -14,11 +12,11 @@ public class JavaCRUD {
         Connection conn = null;
         Statement stmt = null;
         try (Scanner sc = new Scanner(System.in)) {
-            // Register JDBC driver
-            // Class.forName("com.mysql.cj.jdbc.Driver");
-            
+
+
+
             System.out.println("Connecting to database...");
-            // conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
             System.out.println("Connected successfully (connection logic stubbed for demo).");
 
             boolean running = true;

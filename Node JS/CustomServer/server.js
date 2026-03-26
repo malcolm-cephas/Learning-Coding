@@ -1,4 +1,4 @@
-/* Exp 6: Node.js Custom Server exploring OS, Path, and Events modules */
+
 
 const http = require('http');
 const os = require('os');
@@ -7,7 +7,7 @@ const EventEmitter = require('events');
 
 const customEmitter = new EventEmitter();
 
-// Event exploration
+
 customEmitter.on('reqReceived', (url) => {
     console.log(`Request received for: ${url}`);
 });
@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
 
     res.writeHead(200, { 'Content-Type': 'application/json' });
 
-    // OS module exploration
+
     const osInfo = {
         platform: os.platform(),
         freeMem: os.freemem(),
@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
         uptime: os.uptime()
     };
 
-    // Path module exploration
+
     const pathInfo = {
         name: path.basename(__filename),
         dir: path.dirname(__filename),
@@ -43,5 +43,5 @@ const server = http.createServer((req, res) => {
 
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
+    console.log(`Server running at http:
 });

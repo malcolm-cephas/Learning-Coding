@@ -1,6 +1,4 @@
-/**
- * Aim: 4. Dijkstra's shortest path algorithm.
- */
+
 #include <stdio.h>
 
 #define INF 999

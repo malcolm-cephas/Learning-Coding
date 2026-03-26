@@ -4,7 +4,7 @@ P = float(input("Enter Principal amount: "))
 R = float(input("Enter Rate of interest: "))
 T = int(input("Enter Number of periods (years): "))
 
-# Compound interest formula: A = P(1 + r/100)^t
+
 A = P * (pow((1 + R / 100), T))
 CI = A - P
 

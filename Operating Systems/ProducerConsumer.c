@@ -1,6 +1,4 @@
-/**
- * Aim: 4. Producer-Consumer using semaphores.
- */
+
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>

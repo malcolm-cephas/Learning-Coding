@@ -1,6 +1,4 @@
-/**
- * Aim: 7. Page replacement policies.
- */
+
 #include <stdio.h>
 
 void FIFO() {

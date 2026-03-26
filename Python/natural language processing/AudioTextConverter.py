@@ -1,5 +1,5 @@
 '''Aim: 8. Audio to Text and Text to Audio.'''
-# Requires: pip install speechrecognition gTTS pydub
+
 
 def text_to_audio(text):
     print(f"Logic used: gTTS(text='{text}', lang='en').save('output.mp3')")

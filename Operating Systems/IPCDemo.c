@@ -1,6 +1,4 @@
-/**
- * Aim: 5. IPC mechanisms (Pipes, FIFOs, Shared Memory).
- */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -12,11 +10,11 @@ int main() {
     pipe(fd);
 
     pid = fork();
-    if (pid > 0) { // Parent
+    if (pid > 0) {
         close(fd[0]);
         write(fd[1], "Hello Child!", 13);
         close(fd[1]);
-    } else { // Child
+    } else {
         close(fd[1]);
         read(fd[0], buffer, 20);
         printf("Child received in Pipe: %s\n", buffer);

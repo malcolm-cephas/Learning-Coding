@@ -1,4 +1,4 @@
-//finding the max and min from the three numbers
+
 #include <stdio.h>
 int main()
 {
@@ -21,9 +21,9 @@ int main()
         min = c;
     }
 
-    // Output the results
+
     printf("%d is max\n", max);
     printf("%d is min\n", min);
-		
+
 	return(0);
 }

@@ -1,6 +1,4 @@
-/**
- * Aim: 20. Pattern matching algorithms using Boyer-Moore
- */
+
 #include <stdio.h>
 #include <string.h>
 

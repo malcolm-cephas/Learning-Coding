@@ -1,6 +1,4 @@
-/**
- * Aim: 9. Frame sorting techniques used in buffers.
- */
+
 #include <stdio.h>
 
 int main() {

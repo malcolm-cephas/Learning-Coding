@@ -1,5 +1,5 @@
 <?php
-/* Aim: 10. Program using PHP database functions. */
+
 $host = "localhost"; $user = "root"; $pass = ""; $db = "my_web_db";
 
 $conn = mysqli_connect($host, $user, $pass, $db);

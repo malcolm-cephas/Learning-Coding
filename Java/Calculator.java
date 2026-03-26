@@ -1,6 +1,4 @@
-/**
- * Aim: 2. Simple calculator using grid layout and exception handling.
- */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -68,7 +66,7 @@ public class Calculator extends JFrame implements ActionListener {
                 case "+": result = firstNum + secondNum; break;
                 case "-": result = firstNum - secondNum; break;
                 case "*": result = firstNum * secondNum; break;
-                case "/": 
+                case "/":
                     if (secondNum == 0) throw new ArithmeticException("Divide by zero");
                     result = firstNum / secondNum; break;
             }

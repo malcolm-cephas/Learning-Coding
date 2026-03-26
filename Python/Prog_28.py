@@ -3,11 +3,11 @@
 import re
 
 def validate_phone(phone):
-    # Matches a basic 10-digit phone number
+
     return re.fullmatch(r'\d{10}', phone) is not None
 
 def validate_email(email):
-    # Basic email regex
+
     regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
     return re.fullmatch(regex, email) is not None
 

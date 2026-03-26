@@ -1,6 +1,6 @@
 '''Aim: Merge two file contents into a third file (Ex 29), Check words in file (Ex 30), Find word with most occurrences (Ex 31), and File stats (Ex 32).'''
 
-# Setup sample files
+
 with open("file1.txt", "w") as f1: f1.write("Python is great for learning programming.\n")
 with open("file2.txt", "w") as f2: f2.write("Learning Python is fun and practical!\n")
 
@@ -13,7 +13,7 @@ def analyze_file(filename):
     words = []
     vowels = "aeiouAEIOU"
     stat = {"words": 0, "vowels": 0, "spaces": 0, "lower": 0, "upper": 0}
-    
+
     with open(filename, "r") as f:
         content = f.read()
         stat["spaces"] = content.count(' ')
@@ -21,18 +21,18 @@ def analyze_file(filename):
             if char.lower() in vowels: stat["vowels"] += 1
             if char.islower(): stat["lower"] += 1
             if char.isupper(): stat["upper"] += 1
-        
+
         words = content.split()
         stat["words"] = len(words)
-    
-    # Word frequency
+
+
     freq = {}
     for w in words: freq[w] = freq.get(w, 0) + 1
     most_common = max(freq, key=freq.get)
-    
+
     return stat, most_common
 
-# Execution
+
 merge_files("file1.txt", "file2.txt", "file3.txt")
 stats, common = analyze_file("file3.txt")
 

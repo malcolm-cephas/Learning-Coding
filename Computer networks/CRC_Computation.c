@@ -1,6 +1,4 @@
-/**
- * Aim: 2. CRC computation (Simplified representation).
- */
+
 #include <stdio.h>
 #include <string.h>
 

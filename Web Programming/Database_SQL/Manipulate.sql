@@ -1,4 +1,4 @@
--- Aim: 9. SQL Program for manipulating databases. --
+
 CREATE DATABASE my_web_db;
 USE my_web_db;
 

@@ -1,12 +1,12 @@
-# read 3 numbers from user
-print "enter x value : "; 
-$x=<stdin>; 
-print "enter y value : "; 
-$y=<stdin>; 
-print "enter z value : "; 
+
+print "enter x value : ";
+$x=<stdin>;
+print "enter y value : ";
+$y=<stdin>;
+print "enter z value : ";
 $z=<stdin>;
 
-# Find largest
+
 my $largest = $x;
 
 if ($y > $largest) {
