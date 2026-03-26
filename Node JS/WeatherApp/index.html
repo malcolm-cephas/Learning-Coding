@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Weather Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        canvas { border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Weather Info (London)</h2>
+        <p id="info">Fetching weather data...</p>
+        <canvas id="weatherChart"></canvas>
+    </div>
+
+    <script>
+        /* Exp 3: ES6 features (Arrow functions, callbacks, Promises, async/await) */
+        
+        // Callback example
+        const displayStatus = (status, callback) => {
+            document.getElementById('info').textContent = status;
+            if (callback) callback();
+        };
+
+        // Async/Await & Promises
+        const fetchWeather = async () => {
+            const API_KEY = 'your_api_key_here'; // Replace with actual API key
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`;
+
+            try {
+                // For demo without actual API key, simulating response data
+                const simulateData = () => new Promise(resolve => {
+                    setTimeout(() => resolve({
+                        main: { temp: 15, humidity: 60 },
+                        wind: { speed: 5 },
+                        name: "London"
+                    }), 1000);
+                });
+
+                const data = await simulateData(); // Replace with: const response = await fetch(url); const data = await response.json();
+                
+                displayStatus(`City: ${data.name} | Temp: ${data.main.temp}°C`, () => {
+                    renderChart(data.main.temp, data.main.humidity, data.wind.speed);
+                });
+
+            } catch (error) {
+                displayStatus("Error fetching weather data: " + error.message);
+            }
+        };
+
+        const renderChart = (temp, hum, wind) => {
+            const ctx = document.getElementById('weatherChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Temp (°C)', 'Humidity (%)', 'Wind (m/s)'],
+                    datasets: [{
+                        label: 'Weather Metrics',
+                        data: [temp, hum, wind],
+                        backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
+                    }]
+                }
+            });
+        };
+
+        fetchWeather();
+    </script>
+</body>
+</html>

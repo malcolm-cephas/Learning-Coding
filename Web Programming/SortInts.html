@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Integer Sorting</title></head>
+<body>
+    <h1>Sort Integers (Exp 19)</h1>
+    <input type="text" id="inputs" placeholder="Enter nums (e.g., 5, 2, 8)">
+    <button onclick="sortNums()">Sort Descending</button>
+    <div id="res"></div>
+
+    <script>
+        function sortNums() {
+            let str = document.getElementById('inputs').value;
+            let arr = str.split(',').map(n => parseInt(n.trim()));
+            arr.sort((a,b) => b - a);
+            document.getElementById('res').innerHTML = "Sorted: " + arr.join(', ');
+        }
+    </script>
+</body>
+</html>

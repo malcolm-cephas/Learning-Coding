@@ -1,0 +1,12 @@
+'''Aim: Write a program to find common values between two arrays.'''
+import numpy as np
+
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([3, 4, 5, 6, 7])
+
+# Using numpy's intersect1d for common values
+common = np.intersect1d(arr1, arr2)
+
+print("Array 1:", arr1)
+print("Array 2:", arr2)
+print("Common values:", common)

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Field Validation</title></head>
+<body>
+    <h1>Field Validation (Exp 6)</h1>
+    <label>Enter Name:</label> <input type="text" id="targetField">
+    <button onclick="check()">Validate</button>
+
+    <script>
+        function check() {
+            let val = document.getElementById('targetField').value;
+            if (val.trim() === "") {
+                alert("Alert: Field cannot be blank!");
+            } else {
+                alert("Success: Data entered!");
+            }
+        }
+    </script>
+</body>
+</html>

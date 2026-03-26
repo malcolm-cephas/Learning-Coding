@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overlapping Hover (Exp 42)</title>
+    <style>
+        .box { width: 200px; height: 150px; position: absolute; border: 2px solid white; transition: 0.3s; }
+        #b1 { background: red; top: 50px; left: 50px; z-index: 1; }
+        #b2 { background: green; top: 80px; left: 80px; z-index: 2; }
+        #b3 { background: blue; top: 110px; left: 110px; z-index: 3; }
+        .box:hover { z-index: 10 !important; cursor: pointer; transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <div id="b1" class="box">Image 1 (Simulated)</div>
+    <div id="b2" class="box">Image 2 (Simulated)</div>
+    <div id="b3" class="box">Image 3 (Simulated)</div>
+</body>
+</html>

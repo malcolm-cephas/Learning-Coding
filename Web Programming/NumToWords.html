@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Number to Words</title></head>
+<body>
+    <h1>Num-to-Words (Exp 20)</h1>
+    In: <input type="text" id="numField"> 
+    Out: <input type="text" id="wordsField" readonly>
+    <button onclick="convert()">Convert</button>
+
+    <script>
+        function convert() {
+            let n = document.getElementById('numField').value;
+            let target = document.getElementById('wordsField');
+            if(isNaN(n)) target.value = "Not a number";
+            else if(n < 0 || n > 999) target.value = "Out of range";
+            else {
+                // Simplified demo for number conversion
+                target.value = "Converted text placeholder for " + n;
+            }
+        }
+    </script>
+</body>
+</html>

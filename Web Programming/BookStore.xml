@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE bookstore [
+<!ELEMENT bookstore (book+)>
+<!ELEMENT book (title, author, isbn, publisher, edition, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]>
+<bookstore>
+    <book>
+        <title>Programming in C</title>
+        <author>E. Balagurusamy</author>
+        <isbn>1234567890</isbn>
+        <publisher>McGraw Hill</publisher>
+        <edition>5th</edition>
+        <price>450</price>
+    </book>
+</bookstore>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Capitals</title>
+    <style>
+        #cap { color: darkblue; font-weight: bold; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>Select Country (Exp 22)</h1>
+    <select id="country" onchange="showCap()">
+        <option value="">--Select--</option>
+        <option value="New Delhi">India</option>
+        <option value="Washington DC">USA</option>
+        <option value="Tokyo">Japan</option>
+    </select>
+    <span id="cap"></span>
+
+    <script>
+        function showCap() {
+            document.getElementById('cap').innerHTML = document.getElementById('country').value;
+        }
+    </script>
+</body>
+</html>

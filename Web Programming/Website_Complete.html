@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Web Site Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Web Programming Lab</h1>
+        <nav>
+            <a href="#forms">Forms</a> | <a href="#tables">Tables</a> | <a href="#frames">Frames</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Exp 1: Tables -->
+    <section id="tables">
+        <h2>Data Table</h2>
+        <table border="1" cellpadding="10">
+            <tr><th>Name</th><th>Course</th><th>Score</th></tr>
+            <tr><td>Naveen</td><td>Python</td><td>95</td></tr>
+            <tr><td>Madhu</td><td>Java</td><td>92</td></tr>
+        </table>
+    </section>
+
+    <!-- Exp 1: Forms -->
+    <section id="forms">
+        <h2>User Registration Form</h2>
+        <form action="#" method="get">
+            <label for="uname">Name:</label>
+            <input type="text" id="uname" name="uname" required><br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Exp 1 & 12: Frames (Using Iframe for compatibility) -->
+    <section id="frames">
+        <h2>Linked Frame (Iframe)</h2>
+        <iframe src="Greeter.html" width="100%" height="200px"></iframe>
+    </section>
+</body>
+</html>

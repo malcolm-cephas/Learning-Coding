@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Greeter Script</title></head>
+<body>
+    <h1>Greeter Script (Exp 3)</h1>
+    <div id="greetingArea"></div>
+
+    <script>
+        let person = prompt("What is your name?");
+        if (person) {
+            document.getElementById("greetingArea").innerHTML = "<h2>Hello " + person + "!</h2>";
+        } else {
+            document.getElementById("greetingArea").innerHTML = "<h2>Hello Guest!</h2>";
+        }
+    </script>
+</body>
+</html>

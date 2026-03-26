@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Text Statistics</title></head>
+<body>
+    <h1>Text Stats (Exp 21)</h1>
+    <textarea id="txt" rows="5" cols="30"></textarea><br>
+    <button onclick="analyze()">Analyze</button>
+
+    <script>
+        function analyze() {
+            let t = document.getElementById('txt').value;
+            let chars = t.length;
+            let words = t.split(/\s+/).filter(w => w.length > 0).length;
+            let lines = t.split(/\r?\n/).length;
+            alert(`Chars: ${chars}\nWords: ${words}\nLines: ${lines}`);
+        }
+    </script>
+</body>
+</html>

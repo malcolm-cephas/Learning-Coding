@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Form Validation (Exp 39)</title></head>
+<body>
+    <h1>Login/Registration Validation</h1>
+    <form name="regForm" onsubmit="return validate()">
+        U: <input type="text" name="uname"><br>
+        P: <input type="password" name="upass"><br>
+        <input type="submit">
+    </form>
+    <script>
+        function validate() {
+            let u = document.regForm.uname.value;
+            let p = document.regForm.upass.value;
+            if(!u || !p) { alert("Fields cannot be empty!"); return false; }
+            if(p.length < 6) { alert("Password must be 6+ chars."); return false; }
+            alert("Validation Success!"); return true;
+        }
+    </script>
+</body>
+</html>

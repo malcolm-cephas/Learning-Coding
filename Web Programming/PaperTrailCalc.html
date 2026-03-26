@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Paper Trail Calc</title></head>
+<body>
+    <h1>Paper Trail Calculator (Exp 11)</h1>
+    <input type="number" id="n1"> <select id="op">
+        <option value="+">+</option><option value="-">-</option>
+    </select> <input type="number" id="n2">
+    <button onclick="calc()">Calculate</button>
+
+    <h3>Paper Trail:</h3>
+    <textarea id="trail" rows="10" cols="30" readonly></textarea>
+
+    <script>
+        function calc() {
+            let n1 = parseFloat(document.getElementById('n1').value);
+            let n2 = parseFloat(document.getElementById('n2').value);
+            let op = document.getElementById('op').value;
+            let res = op === '+' ? n1 + n2 : n1 - n2;
+            document.getElementById('trail').value += `${n1} ${op} ${n2} = ${res}\n`;
+        }
+    </script>
+</body>
+</html>

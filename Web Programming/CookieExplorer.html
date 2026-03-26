@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cookie Explorer</title></head>
+<body>
+    <h1>Cookie Explorer (Exp 32 & 15)</h1>
+    <button onclick="listCookies()">List Cookies</button>
+    <div id="res"></div>
+
+    <script>
+        function listCookies() {
+            let res = document.cookie ? document.cookie : "No cookies found (Add some first!)";
+            document.getElementById('res').innerText = res;
+        }
+    </script>
+</body>
+</html>

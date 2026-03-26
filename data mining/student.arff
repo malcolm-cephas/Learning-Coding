@@ -1,0 +1,13 @@
+@RELATION student
+
+@ATTRIBUTE name STRING
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE gpa NUMERIC
+@ATTRIBUTE class {freshman, sophomore, junior, senior}
+
+@DATA
+'Alice', 18, 3.8, freshman
+'Bob', 19, 3.5, sophomore
+'Charlie', 20, 3.2, junior
+'David', 21, 3.9, senior
+'Eve', 18, 3.7, freshman

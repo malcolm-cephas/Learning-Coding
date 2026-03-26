@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>AJAX Login</title></head>
+<body>
+    <h1>AJAX Login (Exp 27 & 9)</h1>
+    U: <input type="text" id="uname"><br>
+    P: <input type="password" id="upass"><br>
+    <button onclick="login()">Submit AJAX</button>
+    <div id="result"></div>
+
+    <script>
+        function login() {
+            let u = document.getElementById('uname').value;
+            let p = document.getElementById('upass').value;
+            // Simulated AJAX
+            setTimeout(() => {
+                document.getElementById('result').innerHTML = `<h3>AJAX Result: Success for ${u}</h3>`;
+            }, 500);
+        }
+    </script>
+</body>
+</html>

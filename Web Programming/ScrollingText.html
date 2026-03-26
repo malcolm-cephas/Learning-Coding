@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Scrolling Text (Exp 40)</title></head>
+<body>
+    <div id="scroll-box" style="position: absolute; left: 0; top: 100px; padding: 20px; font-weight: bold;">
+        SCROLLING TEXT MOVE FROM LEFT TO RIGHT
+    </div>
+
+    <script>
+        let pos = 0;
+        function scroll() {
+            pos += 2;
+            if(pos > window.innerWidth) pos = -300;
+            document.getElementById('scroll-box').style.left = pos + "px";
+            setTimeout(scroll, 20);
+        }
+        scroll();
+    </script>
+</body>
+</html>
