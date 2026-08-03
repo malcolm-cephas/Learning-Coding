@@ -7,7 +7,7 @@ def nth_tribonacci_number(n:int) -> int:
     t0,t1,t2=0,1,1
 
     for _ in range(3,n+1):
-        t0,t1,t2=t1,t2,t0+t1+t2
+        t0,t1,t2=t1,t2,t0+t1+t2   #for fibonnacci just have t2= t1+t2 same code
     return t2
 
 if __name__=="__main__":
