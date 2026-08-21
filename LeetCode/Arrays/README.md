@@ -12,10 +12,11 @@ For each problem, I maintain solutions in **Python and Java**:
 
 |  # | Problem                                                                                                    | Base Language                                        | Translated Language                                |
 | -: | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------- |
-|  1 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  | [Remove Duplicates.py](Remove%20Duplicates.py)       | [Remove Duplicates.java](Remove%20Duplicates.java) |
-|  2 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)                              | [LongestCommonPrefix.java](LongestCommonPrefix.java) | [LongestCommonPrefix.py](LongestCommonPrefix.py)   |
-|  3 | [Three Sum Triplets to 0](https://leetcode.com/problems/3sum/?envType=problem-list-v2&envId=array)         | [3Sum.py](3Sum.py)                                   | [3Sum.java](3Sum.java)                             |
-|  4 | [Sum Closest](https://leetcode.com/problems/3sum-closest/description/?envType=problem-list-v2&envId=array) | [3SumClose.py](3SumClose.py)                         | [3SumClose.java](3SumClose.java)                   |
+|  1 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)| [Remove Duplicates.py](Remove%20Duplicates.py)| [Remove Duplicates.java](Remove%20Duplicates.java)|
+|  2 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)| [LongestCommonPrefix.java](LongestCommonPrefix.java) | [LongestCommonPrefix.py](LongestCommonPrefix.py)|
+|  3 | [Three Sum Triplets to 0](https://leetcode.com/problems/3sum/?envType=problem-list-v2&envId=array)| [3Sum.py](3Sum.py)| [3Sum.java](3Sum.java)|
+|  4 | [Sum Closest](https://leetcode.com/problems/3sum-closest/description/?envType=problem-list-v2&envId=array) | [3SumClose.py](3SumClose.py)|[3SumClose.java](3SumClose.java)|
+|  4 | [4 Sum to Value](https://leetcode.com/problems/4sum/?envType=problem-list-v2&envId=array) | [4Sum.py](4Sum.py)| [4Sum.java](4Sum.java)|
 
 ---
 
